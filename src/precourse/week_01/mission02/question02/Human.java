@@ -63,8 +63,8 @@ public class Human {
         marriageStr = "미혼자";
     }
 
-    @Override
-    public String toString() {
-        
-    }
+//    @Override
+//    public String toString() {
+//
+//    }
 }
