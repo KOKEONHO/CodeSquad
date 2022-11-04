@@ -10,6 +10,7 @@ public class HumanExample {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         Human human1 = new Human("제인", 30, 'F', true, 1);
+        Human human2 = new Human("고건호", 26, 'M', true, 9);
 
         bw.write("이름은 "
                 + human1.getName()
@@ -26,6 +27,11 @@ public class HumanExample {
                     + human1.getChildrenCnt()
                     + "명이 있습니다.");
         }
+
+        bw.newLine();
+
+        bw.write(human2.toString());
+        bw.newLine();
 
         bw.flush();
         bw.close();

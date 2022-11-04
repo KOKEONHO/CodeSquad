@@ -48,23 +48,41 @@ public class Human {
 
     // else문을 사용하지 않기 위해 만든 메서드
     public void setGenderStr() {
-        if(gender=='F') {
-            genderStr="여성";
+        if (gender == 'F') {
+            genderStr = "여성";
             return;
         }
-        genderStr="남성";
+        genderStr = "남성";
     }
 
     public void setMarriageStr() {
-        if(marriage) {
+        if (marriage) {
             marriageStr = "기혼자";
             return;
         }
         marriageStr = "미혼자";
     }
 
-//    @Override
-//    public String toString() {
-//
-//    }
+    @Override
+    public String toString() {
+        setGenderStr();
+        setMarriageStr();
+        String string = "";
+        string += "이름은 "
+                + name
+                + "이고 나이는 "
+                + age
+                + "살 입니다. 성별은 "
+                + genderStr
+                + "이며, "
+                + marriageStr
+                + "입니다.";
+        if (marriage) {
+            string += " 자녀는 "
+                    + childrenCnt
+                    + "명이 있습니다.";
+        }
+
+        return string;
+    }
 }
