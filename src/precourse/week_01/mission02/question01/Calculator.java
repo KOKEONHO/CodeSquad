@@ -5,7 +5,7 @@ public class Calculator {
     Number number = new Number();   // Number 객체 생성
 
     public int sum() {
-        return number.getTen() + number.getTen();
+        return number.getTen() + number.getTwo();
     }
 
     public int subtract() {
