@@ -3,6 +3,7 @@ package precourse.week_02.mission01.Question02;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,8 +17,8 @@ public class BookExample implements Cloneable {
         ArrayList<Book> libraryB = new ArrayList<>();       // 얕은 복사
 
         addElements(libraryA);  // 온마을(A) 도서관에 책 추가
-        libraryA_1 = shallowCopyElements(libraryA, libraryA_1);    // libraryA 값을 libraryA_1에 얕은 복사
-        libraryB = deepCopyElements(libraryA, libraryB);   // libraryA 값을 libraryB에 깊은 복사
+        libraryA_1 = shallowCopyElements(libraryA);    // libraryA 값을 libraryA_1에 얕은 복사
+        libraryB = deepCopyElements(libraryA);   // libraryA 값을 libraryB에 깊은 복사
 
         libraryA.get(2).renameBook("그 많던 싱아는 누가 다 먹었을까");
         libraryA.get(2).renameAuthor("박완서");
@@ -64,18 +65,18 @@ public class BookExample implements Cloneable {
         library.add(new Book("대변동", "제레드 다이아몬드"));
     }
 
-    public static ArrayList<Book> shallowCopyElements(ArrayList<Book> libraryA, ArrayList<Book> libraryA_1) {  // A-1 도서관에 책 얕은 복사
+    public static ArrayList<Book> shallowCopyElements(ArrayList<Book> libraryA) {  // A-1 도서관에 책 얕은 복사
 
         return new ArrayList<Book>(libraryA);
     }
 
-    public static ArrayList<Book> deepCopyElements(ArrayList<Book> libraryA, ArrayList<Book> libraryB) {   // B 도서관에 책 깊은 복사
+    public static ArrayList<Book> deepCopyElements(ArrayList<Book> libraryA) {   // B 도서관에 책 깊은 복사
 
-        return (ArrayList<Book>) libraryA.clone();      // 원래 이렇게 cast(?)를 해줘야 하는건가 ...?
+        return (ArrayList<Book>) libraryA.clone();      // 원래 이렇게 cast(?)를 해줘야 하는건가 ...? -> obj 형이니 캐스팅을 해줘야함
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    protected Object clone() {
         Object obj = null;
         try {
             obj = super.clone();
