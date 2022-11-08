@@ -1,6 +1,8 @@
 package precourse.week_02.mission01.Question02;
 
-public class Book {
+import java.lang.management.ClassLoadingMXBean;
+
+public class Book implements Cloneable {
 
     private String name;
     private String author;
@@ -20,5 +22,16 @@ public class Book {
 
     public String showBookInfo() {
         return "[" + name + "|" + author + "]";
+    }
+
+    @Override
+    protected Object clone() {
+        Object obj = null;
+        try {
+            obj = super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return obj;
     }
 }

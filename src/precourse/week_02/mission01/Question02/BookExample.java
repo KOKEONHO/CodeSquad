@@ -20,14 +20,11 @@ public class BookExample {
         libraryA_1 = shallowCopyElements(libraryA);         // libraryA 값을 libraryA_1에 얕은 복사
         libraryB = deepCopyElements(libraryA);              // libraryA 값을 libraryB에 깊은 복사
 
-        libraryA.get(2).renameBook("그 많던 싱아는 누가 다 먹었을까");
-        libraryA.get(2).renameAuthor("박완서");
-
-        libraryB.add(new Book("사피엔스", "유발 하라리"));
+        changeContents(libraryA, libraryB);                 // libraryA에 책 교체하고 libraryB에 책 추가
 
         bw.write("libraryA 출력: ");
         bw.newLine();
-        for(int i=0; i<libraryA.size(); i++) {
+        for (int i = 0; i < libraryA.size(); i++) {
             bw.write(libraryA.get(i).showBookInfo());
             bw.newLine();
         }
@@ -37,7 +34,7 @@ public class BookExample {
 
         bw.write("libraryA_1 출력: ");
         bw.newLine();
-        for(int i=0; i<libraryA_1.size(); i++) {
+        for (int i = 0; i < libraryA_1.size(); i++) {
             bw.write(libraryA_1.get(i).showBookInfo());
             bw.newLine();
         }
@@ -47,7 +44,7 @@ public class BookExample {
 
         bw.write("libraryB 출력: ");
         bw.newLine();
-        for(int i=0; i<libraryB.size(); i++) {
+        for (int i = 0; i < libraryB.size(); i++) {
             bw.write(libraryB.get(i).showBookInfo());
             bw.newLine();
         }
@@ -73,19 +70,18 @@ public class BookExample {
     public static ArrayList<Book> deepCopyElements(ArrayList<Book> libraryA) {      // B 도서관에 책 깊은 복사
 
         ArrayList<Book> libraryB = new ArrayList<>();                               // 원래 이렇게 cast(?)를 해줘야 하는건가 ...? -> obj 형이니 캐스팅을 해줘야함
-        for(int i=0; i<libraryA.size(); i++) {
-            libraryB.add(libraryA.get(i).clone());
+        for (int i = 0; i < libraryA.size(); i++) {
+            libraryB.add((Book) libraryA.get(i).clone());
         }
+
+        return libraryB;
     }
 
-    @Override
-    protected Object clone() {
-        Object obj = null;
-        try {
-            obj = super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return obj;
+    public static void changeContents(ArrayList<Book> libraryA, ArrayList<Book> libraryB) {
+
+        libraryA.get(2).renameBook("그 많던 싱아는 누가 다 먹었을까");
+        libraryA.get(2).renameAuthor("박완서");
+
+        libraryB.add(new Book("사피엔스", "유발 하라리"));
     }
 }
