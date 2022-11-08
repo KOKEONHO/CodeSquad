@@ -1,8 +1,6 @@
 package precourse.week_02.mission01.Question03;
 
-import java.io.IOException;
-
-public class DFS_PracticeRecursion {
+public class DFSPracticeRecursion {
 
     // 방문 처리에 사용할 배열 선언
     static boolean[] visited = new boolean[9];
@@ -24,7 +22,7 @@ public class DFS_PracticeRecursion {
 
         // 방문한 노드에 인접한 노드 찾기
         for(int i=0; i<graph.length; i++) {
-            
+
         }
     }
 }
