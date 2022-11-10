@@ -74,18 +74,9 @@ public class BookExample {
 
         ArrayList<Book> libraryB = new ArrayList<>();                               // 원래 이렇게 cast(?)를 해줘야 하는건가 ...? -> obj 형이니 캐스팅을 해줘야함
         for(int i=0; i<libraryA.size(); i++) {
-            libraryB.add(libraryA.get(i).clone());
+            libraryB.add((Book) libraryA.get(i).clone());
         }
-    }
 
-    @Override
-    protected Object clone() {
-        Object obj = null;
-        try {
-            obj = super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return obj;
+        return libraryB;
     }
 }
