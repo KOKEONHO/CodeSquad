@@ -1,4 +1,4 @@
-package precourse.week_02.mission01.Question03;
+package precourse.week_02.mission01.question03;
 
 public class DFSPracticeRecursion {
 

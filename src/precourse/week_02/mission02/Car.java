@@ -2,15 +2,17 @@ package precourse.week_02.mission02;
 
 public class Car {
 
-    private static int carNum = 1000;
-    private static int carNumber;
+    private int carNum;     // 자동차 제조 번호
 
     Car() {
-        carNumber = carNum;
-        this.carNum++;
+
+    }               // 기본 생성자
+
+    public void setCarNum(int carNum) {
+        this.carNum = carNum;
     }
 
-    public int showCarNumber() {
-        return this.carNumber;
+    public int showCarNum() {
+        return carNum;
     }
 }

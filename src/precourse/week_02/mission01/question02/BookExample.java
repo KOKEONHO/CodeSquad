@@ -1,11 +1,9 @@
-package precourse.week_02.mission01.Question02;
+package precourse.week_02.mission01.question02;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BookExample {
     public static void main(String[] args) throws IOException {

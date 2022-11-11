@@ -1,6 +1,4 @@
-package precourse.week_02.mission01.Question02;
-
-import java.lang.management.ClassLoadingMXBean;
+package precourse.week_02.mission01.question02;
 
 public class Book implements Cloneable {
 
