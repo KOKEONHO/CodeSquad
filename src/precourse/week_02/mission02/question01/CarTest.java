@@ -1,4 +1,4 @@
-package precourse.week_02.mission02;
+package precourse.week_02.mission02.question01;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
