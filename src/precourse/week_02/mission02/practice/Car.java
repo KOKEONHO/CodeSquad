@@ -10,7 +10,7 @@ public class Car {
     Car() {}
 
     public void setCarInfo() {
-        Print.globalPrintln("차 정보 입력: ");
+        Print.globalPrint("차 정보 입력: ");
         String carInfo = Input.globalInput();
         StringTokenizer st = new StringTokenizer(carInfo);
         carNum = Integer.parseInt(st.nextToken());
@@ -18,8 +18,8 @@ public class Car {
     }
 
     public void showCarInfo() {
-        Print.globalPrintln("차 번호: " + carNum);
+        Print.globalPrint("차 번호: " + carNum);
         Print.globalPrintln();
-        Print.globalPrintln("차 이름: "+carName);
+        Print.globalPrint("차 이름: "+carName);
     }
 }
