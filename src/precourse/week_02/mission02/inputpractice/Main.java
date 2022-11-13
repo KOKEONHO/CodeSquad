@@ -1,4 +1,4 @@
-package precourse.week_02.mission02.practice;
+package precourse.week_02.mission02.inputpractice;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +7,5 @@ public class Main {
 
         myCar.setCarInfo();
         myCar.showCarInfo();
-
     }
 }

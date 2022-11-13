@@ -1,13 +1,13 @@
-package precourse.week_02.mission02.practice;
+package precourse.week_02.mission02.inputpractice;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 
 public class Print {
 
-    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    public static void globalPrint(String string) {
+    public void globalPrint(String string) {
         try {
             bw.write(string);
             bw.flush();
@@ -16,7 +16,7 @@ public class Print {
         }
     }
 
-    public static void globalPrintln(String string) {
+    public void globalPrintln(String string) {
         try {
             bw.write(string);
             bw.newLine();
@@ -26,7 +26,7 @@ public class Print {
         }
     }
 
-    public static void globalPrintln()   {
+    public void globalPrintln()   {
         try {
             bw.newLine();
             bw.flush();
