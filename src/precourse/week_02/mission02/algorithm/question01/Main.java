@@ -24,7 +24,7 @@ public class Main {
         bw.write("시작 단어를 입력해주세요. >> ");
         bw.flush();
         String startWord = br.readLine();
-        bw.write("시작 단어는 \""+startWord+"\"입니다.");
+        bw.write("시작 단어는 \"" + startWord + "\"입니다.");
         bw.flush();
 
         int memberIdx = 0;
