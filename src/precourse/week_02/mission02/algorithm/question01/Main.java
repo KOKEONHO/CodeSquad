@@ -27,10 +27,16 @@ public class Main {
         bw.write("시작 단어는 \""+startWord+"\"입니다.");
         bw.flush();
 
-        while(true) {
+        int memberIdx = 0;
 
+        while(true) {
+            if(memberIdx==10) break;
+            bw.write(memberList.get(memberIdx)+">>");
+            bw.flush();
+            memberIdx++;
         }
 
+        bw.flush();
         bw.close();
     }
 }
