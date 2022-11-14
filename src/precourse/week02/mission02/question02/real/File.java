@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class File {
 
     String fileName = null;
+    String directory = null;
 
     public void createFile() throws IOException {
 
@@ -14,12 +15,14 @@ public class File {
 
         console.write("파일 생성 시작");
         console.newLine();
+        console.write("파일 디렉토리 입력: ");
+        console.flush();
+        directory = br.readLine();
         console.write("파일 이름 입력: ");
         console.flush();
-
         fileName = br.readLine();
 
-        BufferedWriter fw = new BufferedWriter(new FileWriter("C:\\Users\\User\\IdeaProjects\\CodeSquad\\"+fileName, true));
+        BufferedWriter fw = new BufferedWriter(new FileWriter(directory+fileName, true));
 
         String string;
 
