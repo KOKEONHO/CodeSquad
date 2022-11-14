@@ -23,7 +23,7 @@ public class File {
 
         String string;
 
-        console.write("----- "+fileName+"에 입력할 내용을 적으십시오. -----");
+        console.write("----- " + fileName + "에 입력할 내용을 적으십시오. -----");
         console.newLine();
         console.write("이름 / 학번 / 전공과목 / 국어 / 수학 / 영어 순서로 적으십시오.");
         console.newLine();
@@ -31,15 +31,15 @@ public class File {
         console.newLine();
         console.flush();
 
-        while(true) {
+        while (true) {
             console.write(">>> ");
             console.flush();
             string = br.readLine();
-            if(string.equals("Exit")) break;
+            if (string.equals("Exit")) break;
             fw.write(string);   // 입력 받은 string을 파일에 write
             fw.newLine();       // 개행
         }
-        
+
         br.close();     // 버퍼리더 종료
         fw.flush();     // 파일에 flush
         fw.close();     // 파일 버퍼라이터 flush 후 종료
@@ -52,7 +52,7 @@ public class File {
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        if(fileName==null) {        // 파일을 생성하기 전에 이 메서드를 호출할 경우
+        if (fileName == null) {        // 파일을 생성하기 전에 이 메서드를 호출할 경우
             bw.write("파일을 먼저 생성하세요!!!");
             bw.newLine();
             bw.flush();
@@ -60,7 +60,7 @@ public class File {
             return;
         }
 
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\rhrjs\\Desktop\\"+fileName));
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\rhrjs\\Desktop\\" + fileName));
 
         StringTokenizer st;
 
@@ -112,7 +112,7 @@ public class File {
             avg = tot / sbjCnt;
             bw.write(name + " 학생은 " + sbjCnt + "과목을 수강했습니다.");
             bw.newLine();
-            bw.write("총점은 " + tot + "점이고 평균은 "+avg+"점입니다.");
+            bw.write("총점은 " + tot + "점이고 평균은 " + avg + "점입니다.");
             bw.newLine();
             bw.write("--------------------------------");
             bw.newLine();
