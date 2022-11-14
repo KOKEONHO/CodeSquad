@@ -1,4 +1,4 @@
-package precourse.week02.mission02.question02.real;
+package precourse.week02.mission02.question02;
 
 import java.io.IOException;
 
@@ -8,5 +8,6 @@ public class FileExample {
         File file = new File();
 
         file.createFile();
+        file.viewFile();
     }
 }
