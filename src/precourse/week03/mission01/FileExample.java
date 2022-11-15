@@ -10,8 +10,6 @@ public class FileExample {
 
         Printer printer = new Printer(bw);
 
-        File file = new File();
 
-        file.createFile(printer);
     }
 }

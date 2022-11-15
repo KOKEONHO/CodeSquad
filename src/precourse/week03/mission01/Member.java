@@ -30,8 +30,6 @@ class RedMember extends Member {
     public String showCustomerInfo() {
         information = customerName + "님의 지불 금액은 "
                 + shoppedCost + " 원이고, 적립 포인트는 "
-                + (int)(shoppedCost * pointRatio) + "점 입니다."
-                + shoppedCost + " 원이고, 적립 포인트는 "
                 + (int) (shoppedCost * pointRatio) + "점 입니다."
                 + "\n주차 요금은 "
                 + parkingFee * timeSpent + "원 입니다.";
