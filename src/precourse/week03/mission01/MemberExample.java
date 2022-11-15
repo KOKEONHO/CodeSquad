@@ -16,16 +16,22 @@ public class MemberExample {
         PlatinumMember platinumMember2 = new PlatinumMember("Percy", 30000, 2);
         DiamondMember diamondMember1 = new DiamondMember("Elizabeth", 30000, 2);
 
-        printer.globalPrintln(redMember1.showCustomerInfo());
-        printer.globalPrintln();
-        printer.globalPrintln(redMember2.showCustomerInfo());
-        printer.globalPrintln();
-        printer.globalPrintln(platinumMember1.showCustomerInfo());
-        printer.globalPrintln();
-        printer.globalPrintln(platinumMember2.showCustomerInfo());
-        printer.globalPrintln();
-        printer.globalPrintln(diamondMember1.showCustomerInfo());
-        printer.globalPrintln();
+//        printer.globalPrintln(redMember1.showCustomerInfo());
+//        printer.globalPrintln();
+//        printer.globalPrintln(redMember2.showCustomerInfo());
+//        printer.globalPrintln();
+//        printer.globalPrintln(platinumMember1.showCustomerInfo());
+//        printer.globalPrintln();
+//        printer.globalPrintln(platinumMember2.showCustomerInfo());
+//        printer.globalPrintln();
+//        printer.globalPrintln(diamondMember1.showCustomerInfo());
+//        printer.globalPrintln();
+
+        printer.globalPrintln(redMember1.showCustomerInfo() + "\n"
+                + redMember2.showCustomerInfo() + "\n"
+                + platinumMember1.showCustomerInfo() + "\n"
+                + platinumMember2.showCustomerInfo() + "\n"
+                + diamondMember1.showCustomerInfo());
 
         printer.globalClose();
     }
