@@ -1,6 +1,6 @@
 package precourse.week02.singleton;
 
-public class Test {
+public class CarFactoryExample {
     public static void main(String[] args) {
 
         CarFactory factory = CarFactory.getInstance();

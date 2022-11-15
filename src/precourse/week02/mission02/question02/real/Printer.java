@@ -1,12 +1,15 @@
-package precourse.week02.mission02.question02;
+package precourse.week02.mission02.question02.real;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 
-public class Print {
+public class Printer {
 
     BufferedWriter bw;
+
+    Printer(BufferedWriter bw) {
+        this.bw = bw;
+    }
 
     public void globalPrintln(String string) {
         try {
@@ -22,14 +25,6 @@ public class Print {
         try {
             bw.write(string);
             bw.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void globalClose() {
-        try {
-            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

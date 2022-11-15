@@ -1,4 +1,4 @@
-package precourse.week02.mission02.question02.real;
+package precourse.week03.practice.printerpractice;
 
 public class Car {
 
