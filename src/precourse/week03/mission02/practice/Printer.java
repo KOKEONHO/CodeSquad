@@ -1,4 +1,4 @@
-package precourse.week03.mission01;
+package precourse.week03.mission02.practice;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -11,9 +11,9 @@ public class Printer {
         this.bw = bw;
     }
 
-    public void globalPrintln(String string) {
+    public void globalPrintln(String s) {
         try {
-            bw.write(string);
+            bw.write(s);
             bw.newLine();
             bw.flush();
         } catch (IOException e) {
@@ -21,9 +21,9 @@ public class Printer {
         }
     }
 
-    public void globalPrint(String string) {
+    public void globalPrint(String s) {
         try {
-            bw.write(string);
+            bw.write(s);
             bw.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,14 +34,6 @@ public class Printer {
         try {
             bw.newLine();
             bw.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void globalClose() {
-        try {
-            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

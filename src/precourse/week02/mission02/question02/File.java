@@ -26,7 +26,6 @@ public class File {
 
         String string;
 
-
         print.globalPrintln("----- " + fileName + "에 입력할 내용을 적으십시오. -----");
         print.globalPrintln("이름 / 학번 / 전공과목 / 국어 / 수학 / 영어 순서로 적으십시오.");
         print.globalPrintln("입력을 종료하시려면 Exit 입력!!!");
