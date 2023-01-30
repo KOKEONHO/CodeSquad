@@ -1,7 +1,8 @@
-package masters.cs16.cs06;
+package masters.cs16.cs08;
 
-public class ChessGame {
+public class Main {
     public static void main(String[] args) {
+
 
     }
 }

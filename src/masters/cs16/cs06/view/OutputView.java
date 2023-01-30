@@ -8,9 +8,9 @@ public class OutputView {
 
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    public void globalPrintln(String string) {
+    public void showInitializationMessage() {
         try {
-            bw.write(string);
+            bw.write("체스 보드를 초기화했습니다.");
             bw.newLine();
             bw.flush();
         } catch (IOException e) {
@@ -18,9 +18,19 @@ public class OutputView {
         }
     }
 
-    public void globalPrint(String string) {
+    public void globalPrintln(String output) {
         try {
-            bw.write(string);
+            bw.write(output);
+            bw.newLine();
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void globalPrint(String output) {
+        try {
+            bw.write(output);
             bw.flush();
         } catch (IOException e) {
             e.printStackTrace();

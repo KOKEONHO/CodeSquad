@@ -9,7 +9,7 @@ public class InputView {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public String globalReadLine() {
-        String input = "";
+        String input = null;
         try {
             input = br.readLine();
         } catch (IOException e) {
